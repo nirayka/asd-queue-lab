@@ -4,9 +4,10 @@ class FancyTimer extends TimerTask {
     public static double seconds = 0;
     public void run() {
         if (seconds == 0) {
-            System.out.println(++seconds + " second has passed.");
+        } else if (seconds == 1) {
+            System.out.println(seconds + " second has passed.");
         } else {
-            System.out.println(++seconds + " seconds have passed.");
+            System.out.println(seconds + " seconds have passed.");
         }
 
         // following statements check each line to see if someone is at the front and if it's time for someone to leave
@@ -29,5 +30,7 @@ class FancyTimer extends TimerTask {
             System.out.println(Theatre.lineFour.peek().getName() + " has finished purchasing tickets and has left Line 4.");
             Theatre.lineFour.remove();
         }
+
+        seconds++;
     }
 }
