@@ -7,7 +7,9 @@ class Theatre extends TimerTask {
         TimerTask fancierTimer = new FancyTimer();
         Theatre myTheatre = new Theatre();
 
-        System.out.println("Welcome to Nirayka's Theatre! The Ticket Window simulation is about to begin.\nPlease note that the line with the shortest wait time at any given moment is indicated by the most recent customer's choice of line.\n");
+        System.out.println("Welcome to Nirayka's Theatre! The Ticket Window simulation is about to begin." +
+            "\nPlease note that the line with the shortest wait time at any given moment is indicated by the" +
+                "most recent customer's choice of line.\n");
 
         int customerArrivalFrequency = (3 + (int)(Math.random() * 4)) * 1000;   // randomly determine how often customers arrive,
                                                                                 // result will be from every three seconds to every six seconds
