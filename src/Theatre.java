@@ -40,7 +40,7 @@ class Theatre extends TimerTask {
 
     public void run() {
         Moviegoer newMovieGoer = new Moviegoer();
-        returnShortestLine().add(newMovieGoer); // adds a customer to the shortest line at that moment
+        returnShortestLine().add(newMovieGoer); // adds a movieGoer to the shortest line at that moment
 
         // following statements determine which line the customer has been added to
         if (lineOne.peek() != null && lineOne.peek().getCustomerID() != lineOneLastID) { // 2nd statement ensures that "Moviegoer #x joined" print statement isn't repeated
@@ -78,4 +78,5 @@ class Theatre extends TimerTask {
 
         return shortestLine;
     }
+
 }
