@@ -44,7 +44,7 @@ class Theatre extends TimerTask {
         returnShortestLine().add(customer); // adds a customer to the shortest line at that moment
 
         // following statements determine which line the customer has been added to
-        if (lineOne.peek() != null && lineOne.peek().getCustomerID() != lineOneLastID) { // second statement ensures that "x customer joined" print statement is not repeated
+        if (lineOne.peek() != null && lineOne.peek().getCustomerID() != lineOneLastID) { // 2nd statement ensures that "x customer joined" print statement isn't repeated
             System.out.println(lineOne.peek().getName() + " has joined Line 1.");
             lineOneLastID = lineOne.peek().getCustomerID();
         }
