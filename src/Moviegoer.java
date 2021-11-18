@@ -9,7 +9,7 @@ class Moviegoer {
         counter++;
         customerID = counter; // may seem redundant, but it's necessary because counter may be updated before customerID is referenced
         arrivalTime = FancyTimer.seconds;
-        windowTime = 8 + (int)(Math.random() * 8); // gives each customer a random windowTime between 8 and 15 seconds
+        windowTime = 8 + (int)(Math.random() * 8); // randomly gives each customer a random windowTime between 8 and 15 seconds
         name = "Moviegoer #" + customerID + ", who takes " + windowTime + " seconds at the window,";
     }
 

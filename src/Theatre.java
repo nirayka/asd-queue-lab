@@ -9,10 +9,9 @@ class Theatre extends TimerTask {
 
         System.out.println("Welcome to Nirayka's Theatre! The Ticket Window simulation is about to begin." +
             "\nPlease note that the line with the shortest wait time at any given moment is indicated by the" +
-                "most recent customer's choice of line.\n");
+                " most recent customer's choice of line.\n");
 
-        int customerArrivalFrequency = (3 + (int)(Math.random() * 4)) * 1000;   // randomly determine how often customers arrive,
-                                                                                // result will be from every three seconds to every six seconds
+        int customerArrivalFrequency = (3 + (int)(Math.random() * 4)) * 1000;   // randomly determine how often customers arrive
         basicTimer.schedule(fancierTimer, 2000, 1000); // begins after two seconds, repeats every second
         basicTimer.schedule(myTheatre, 3000, customerArrivalFrequency); // begins after three seconds, repeats every customerArrivalFrequency seconds
     }
@@ -63,7 +62,7 @@ class Theatre extends TimerTask {
     }
 
     public Queue<Moviegoer> returnShortestLine() {
-        int  shortestWaitTime = 100000000;
+        int shortestWaitTime = 100000000;
         Queue<Moviegoer> shortestLine = lineOne;
 
         for (int k = 0; k < 4; k++) {
