@@ -9,7 +9,7 @@ class Theatre extends TimerTask {
 
         System.out.println("Welcome to Nirayka's Theatre! The Ticket Window simulation is about to begin." +
             "\nPlease note that the line with the shortest wait time at any given moment is indicated by the" +
-                " most recent customer's choice of line.\n");
+                " most recent moviegoer's choice of line.\n");
 
         int customerArrivalFrequency = (3 + (int)(Math.random() * 4)) * 1000;   // randomly determine how often customers arrive
         basicTimer.schedule(fancierTimer, 2000, 1000); // begins after two seconds, repeats every second
@@ -42,22 +42,22 @@ class Theatre extends TimerTask {
         Moviegoer newMovieGoer = new Moviegoer();
         returnShortestLine().add(newMovieGoer); // adds a movieGoer to the shortest line at that moment
 
-        // following statements determine which line the customer has been added to
-        if (lineOne.peek() != null && lineOne.peek().getCustomerID() != lineOneLastID) { // 2nd statement ensures that "Moviegoer #x joined" print statement isn't repeated
+        // following statements determine which line the movieGoer has been added to
+        if (lineOne.peek() != null && lineOne.peek().getMovieGoerID() != lineOneLastID) { // 2nd statement ensures that "Moviegoer #x joined" print statement isn't repeated
             System.out.println(lineOne.peek().getName() + " has joined Line 1.");
-            lineOneLastID = lineOne.peek().getCustomerID();
+            lineOneLastID = lineOne.peek().getMovieGoerID();
         }
-        if (lineTwo.peek() != null && lineTwo.peek().getCustomerID() != lineTwoLastID) {
+        if (lineTwo.peek() != null && lineTwo.peek().getMovieGoerID() != lineTwoLastID) {
             System.out.println(lineTwo.peek().getName() + " has joined Line 2.");
-            lineTwoLastID = lineTwo.peek().getCustomerID();
+            lineTwoLastID = lineTwo.peek().getMovieGoerID();
         }
-        if (lineThree.peek() != null && lineThree.peek().getCustomerID() != lineThreeLastID) {
+        if (lineThree.peek() != null && lineThree.peek().getMovieGoerID() != lineThreeLastID) {
             System.out.println(lineThree.peek().getName() + " has joined Line 3.");
-            lineThreeLastID = lineThree.peek().getCustomerID();
+            lineThreeLastID = lineThree.peek().getMovieGoerID();
         }
-        if (lineFour.peek() != null && lineFour.peek().getCustomerID() != lineFourLastID) {
+        if (lineFour.peek() != null && lineFour.peek().getMovieGoerID() != lineFourLastID) {
             System.out.println(lineFour.peek().getName() + " has joined Line 4.");
-            lineFourLastID = lineFour.peek().getCustomerID();
+            lineFourLastID = lineFour.peek().getMovieGoerID();
         }
     }
 
